@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.clearfix:after{
+    visibility:hidden;
+    clear:both;
+    display:block;
+    content:".";
+    height:0;
+}
+.clearfix{
+    *zoom:1;
+}
+img {border: 0; vertical-align: middle;}
+body {
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: #333;
+}
+li {list-style: none;}
+a {text-decoration: none;}
+a:hover {text-decoration: underline;}
+a.no-line:hover {text-decoration: none;}
+body {font-size: 12px; font-family: "微软雅黑"; color: #666}
+/*header start*/
+.header {width: 1200px;height: 70px; margin: 0 auto; padding-top: 10px;}
+.header h1 {float: left;}
+.header h1 a {display: inline-block;width: 220px; height: 70px; background: url("../images/sprite.png");}
+.header .h_search {float: left; margin-left: 220px;}
+.header .h_search .search {width: 450px; height: 36px; border: 2px solid #188eee; position: relative;}
+.header .h_search .search .s_text{width: 370px; height: 36px; line-height: 30px; font-family: "微软雅黑"; font-size: 14px; color: #545454; padding-left: 10px; border: 0;}
+.header .h_search .search a {width: 58px; height: 36px;display: block; background: #188eee; position: absolute; right: 0; top: 0;}
+.header .h_search .search a i {display:block;width: 20px; height: 20px; background: url("../images/sprite.png") no-repeat; background-position: -90px -120px; margin: 8px auto;}
+.header .login {float: right;margin-right: 15px; line-height: 40px; color: #dedede;}
+.header .login a{text-decoration: none; color: #333; }
+.header .login a:nth-child(1) {margin-right: 20px;}
+.header .login a:nth-child(2) {margin-left: 20px;}
+/*header end*/
+
+/*banner start*/
+.banner {width: 100%; height: 300px; background: #6c0;}
+/*左边导航区 开始*/
+.banner .category { position: relative;width: 1200px; margin: 0 auto;}
+.banner .category .b_nav{position: absolute;width: 270px; height: 300px; background: #f2f2f4;z-index: 50}
+.banner .category .b_nav ul li {height: 50px; line-height: 50px;}
+.banner .category .b_nav ul li .title {display: inline-block; color: #333; padding: 0 0 0 20px; line-height: 50px;  font-size: 16px; font-weight: bold;}
+.banner .category .b_nav ul li .title a {color: #333;}
+.banner .category .b_nav ul li > a {margin-left: 8px;color: #666; font-size: 14px;}
+.banner .category .b_nav ul li .arrow {float: right; color: #666; opacity: .4; margin-right: 8px; font-size: 20px;}
+/*左边导航区结束*/
+/*右侧登录区*/
+.banner .login {position: relative; width: 1200px; margin: 0 auto;  z-index: 20; }
+.banner .login .user{position:absolute; top: 20px; right: 0;width: 220px; height: 260px; background: #fff;box-shadow: 0 1px 10px 3px rgba(0,0,0,.1); line-height: 50px; }
+.banner .login .user .not-login{padding: 21px 0 15px;width: 220px;line-height: 1.5;}
+.banner .login .user .not-login p {font-size: 16px; color: #999; text-align: center;}
+.banner .login .user .not-login .not-login-img {margin: 10px auto;width: 170px; height: 130px;background: url("../images/sprite.png") no-repeat -144px -370px;}
+.banner .login .user .login-btn {display:block; margin: -10px auto; width: 200px; height: 50px; background: #23b8ff; color: #fff; font-size: 16px; text-align: center; line-height: 50px; border-radius: 3px;}
+.banner .login .user .login-btn:hover {background-color: #12a7ff; text-decoration: none;}
+/*右侧登录区结束*/
+/*轮播图开始*/
+.banner section {width: 100%; position: relative;}
+
+.banner section:hover > a {display: block;}
+.banner section > a {position: absolute; display: none; width: 50px; height: 50px; top: 125px; background: #000; opacity: 0.5; border-radius: 50%; text-align: center; line-height: 50px; color: #fff;font-size: 22px; font-weight: 400;z-index: 20;}
+.banner section > a:hover {text-decoration: none;}
+.banner section > .left {left: 50%; margin-left:-320px; }
+.banner section > .right {right: 50%; margin-right:-370px; }
+
+.banner .content { position: relative;width: 100%; height: 300px;}
+.banner .content li {position: absolute; width: 100%; height: 300px; z-index: 10;  visibility: hidden; opacity: 0; transition: all 0.5s;}
+.banner .content li.active{visibility: visible; opacity: 1;}
+.banner .content li a {display: block;width: 100%; height: 300px; text-align: center;}
+.banner .content li a img {position: relative; left: 25px;}
+.banner .btns {position: absolute; width: 100%; bottom: 16px;text-align: center; z-index: 20;}
+.banner .btns li {display: inline-block; width: 40px; height: 2px;background: #333; cursor: pointer;}
+.banner .btns li.active{background: #808080;}
+/*轮播图结束*/
+/*banner end*/
+
+/*Tab导航栏开始*/
+.cate-tab {width: 100%; min-width: 1240px; border-bottom: 1px solid #e5e5e5;}
+.cate-tab .cate-tab-sub {position: relative;width: 1200px; margin: 0 auto;}
+.cate-tab .cate-tab-sub  ul {text-align: center;}
+.cate-tab .cate-tab-sub  ul li {display: inline-block; width: 104px; height: 62px; text-align: center; line-height: 62px; color: #666; font-size: 20px; cursor: pointer;}
+.cate-tab .cate-tab-sub  ul li.active{color: #23b8ff;border-bottom: 4px solid #23b8ff}
+.cate-tab .cate-tab-sub .cate-tab-btn {position: absolute; right: 0; top: 20px;}
+.cate-tab .cate-tab-sub .cate-tab-btn a {display: block; width : 76px; height: 27px; border: 1px solid #999; border-radius: 2px; text-align: center; color: #666;  line-height: 27px; font-size: 14px;}
+.cate-tab .cate-tab-sub .cate-tab-btn a:hover {text-decoration: none;}
+/*Tab导航栏结束*/
+
+/*主体内容开始*/
+
+/*直播课开始*/
+.container {width: 100%; margin-top: 48px;}
+.container .container-1200 {width: 1200px; height: 410px; margin: 0 auto 55px;  }
+.container .container-1200 h2 {font-size: 30px; text-align: center; line-height: 30px;}
+.container .container-1200 .live-course {width: 100%; margin-top: 30px;}
+.container .container-1200 .live-course div {float: left;}
+.container .container-1200 .live-course .screen {width: 620px; height: 348px; position: relative;}
+
+.container .container-1200 .live-course .screen img {width: 100%; height: 100%;}
+.container .container-1200 .live-course .screen .mask {position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #000; opacity: 0.7;}
+.container .container-1200 .live-course .screen .screen-info {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+.container .container-1200 .live-course .screen .screen-info .course-name {width: 482px; margin:64px auto ; font-size: 24px; line-height: 24px; color: #fff; text-align: center;}
+.container .container-1200 .live-course .screen .screen-info .apply {display: block; margin: 30px auto 0; width: 180px; height: 50px; background: #23b8ff; border-radius: 2px; font-size: 20px; line-height: 50px; text-align: center; color: #fff;}
+.container .container-1200 .live-course .screen .screen-info .apply:hover {background: #12a7ff;}
+.container .container-1200 .live-course .screen .screen-info .course-info {position: absolute; bottom: 0; width: 100%; height: 70px; line-height: 70px; background: rgba(0,0,0,.3); text-align: left;}
+.screen-info .course-info .teacher-info {padding-left: 15px; color: #fff; min-width: 220px;}
+.container .container-1200 .live-course .screen .screen-info .course-info .teacher-info img {width: 40px; height: 40px; border-radius: 50%; margin-right: 8px;}
+.screen-info .course-info .teacher-info .teacher-name {font-size: 18px; color: #fff;}
+.screen-info .course-info .course-link {position: absolute;  top: 0; right: 15px; width: 350px; height: 70px;font-size: 15px; color: #fff;}
+.screen-info .course-info .course-link span {float: left; margin-right: 3px; max-width: 334px; height: 70px; overflow: hidden; text-overflow: ellipsis;}
+.screen-info .course-info .course-link:hover {color: #23b8ff; text-decoration: none;}
+.live-course .list {position: relative;width: 579px; height: 348px; float:left; background: #f4f4f4; border: 1px solid #eee; border-left: 0;}
+.live-course .list .time-axis{position: absolute; left: 43px; width: 0; height: 100%; border-left: 2px dotted #e8e8e8;}
+.live-course .list .content {width: 100%;}
+.live-course .list .content li { position: relative; height: 50px; padding: 0 48px; font-size: 16px; line-height: 50px;}
+.live-course .list .content li .dot {position: absolute; left: 40px; top: 20px; width:6px; height: 6px; background: #ccc; border: 1px solid #ccc; border-radius: 50%; cursor: pointer; }
+.live-course .list .content li.active .zhibo{position: absolute; left: 32px; top: 13px; width: 24px;height: 24px; background: url("../images/zhibozhong.gif");}
+.live-course .list .content li .link {display: block; width: 483px; height: 50px;}
+.live-course .list .content li .link .time {display:block; float:left;padding-left: 25px; color: #bbb;}
+.live-course .list .content li.active .link .time {color: #23b8ff;}
+.live-course .list .content li .link .info {margin-left: 15px; color: #333;}
+.live-course .list .content li.active .link .info { color: #23b8ff;}
+.live-course .list .content li:hover {background: #fff;}
+.live-course .list .content li:hover .dot {background:#23b8ff; border-color: #23b8ff; }
+.live-course .list .content li:hover .link .time {color: #23b8ff;}
+.live-course .list .content li:hover .link .info {color: #23b8ff;}
+/*直播课结束*/
+
+/*选课中心开始*/
+.select-course-center {width: 100%;}
+.select-course-center .container {width: 1200px; margin: 0 auto;}
+.select-course-center .container .select-course-hd h2{position: relative;font-size: 30px; line-height: 30px; text-align: center;}
+.select-course-center .container .select-course-hd h2 a {position: absolute; right: -3px; line-height: 30px;  font-size: 16px; color:#333;font-weight: 400;}
+.select-course-center .container .select-course-hd h2 a:hover {text-decoration: none; color:#23b8ff;}
+.select-course-center .container .select-course-hd .line {margin: 30px auto 0;width: 1200px; height: 5px; background: #f4f4f4;}
+
+.select-course-center .container .select-course-hd .nav-wrapper {padding-top: 18px; font-size: 18px; line-height: 20px;}
+.select-course-center .container .select-course-hd .nav-wrapper dl{display: table-row;}
+.select-course-center .container .select-course-hd .nav-wrapper dl dt{display: table-cell; width: 36px; color: #999; vertical-align: top; overflow: hidden;}
+.select-course-center .container .select-course-hd .nav-wrapper dl dd {display: table-cell; padding-left: 60px;}
+.select-course-center .container .select-course-hd .nav-wrapper dl dd ul li {position: relative;float: left;margin-right: 50px; font-size: 16px; margin-bottom: 24px; cursor: pointer;}
+.select-course-center .container .select-course-hd .nav-wrapper dl dd ul li.current {color: #23b8ff;}
+.select-course-center .container .select-course-hd .nav-wrapper dl dd ul li.current:after{content: "";width: 100%; position: absolute;left: 0; top: 22px; border-bottom: 2px solid #23b8ff; border-radius: 1px; }
+.select-course-center .container .select-course-hd .nav-wrapper div {width: 100%;}
+.select-course-center .container .select-course-hd .nav-wrapper div span {float:left;}
+.select-course-center .container .select-course-hd .nav-wrapper div ul {float: left; padding-left: 60px;}
+.select-course-center .container .select-course-hd .nav-wrapper div ul li {position: relative;float: left;margin-right: 50px; font-size: 16px; margin-bottom: 24px; cursor: pointer;}
+.select-course-center .container .select-course-hd .nav-wrapper div ul li.current {color: #23b8ff;}
+.select-course-center .container .select-course-hd .nav-wrapper div ul li.current:after {content: "";width: 100%; position: absolute;left: 0; top: 22px; border-bottom: 2px solid #23b8ff; border-radius: 1px;}
+
+.select-course-center .container .main-courses  .course {float:left; width: 220px; padding: 7px 7px 10px; border: 1px solid transparent;}
+.select-course-center .container .main-courses  .course:hover {border-color: #ddd; box-shadow: 1px 1px 2px 1px #ECECEC;}
+.select-course-center .container .main-courses  .course .course-title {height: 40px; font-size: 14px; margin-bottom: 8px;}
+.select-course-center .container .main-courses  .course .course-title a {color:#333 ;}
+.select-course-center .container .main-courses  .course .course-title a:hover {color:#23b8ff; text-decoration: none;}
+.select-course-center .container .main-courses  .course .course-line {height: 24px; line-height: 24px; font-size: 12px;}
+.select-course-center .container .main-courses  .course .course-line .free {font-size: 14px; color:#5fb41b;}
+.select-course-center .container .main-courses  .course .course-line .course-t{float: right; width: 105px; text-align: right; color: #999;}
+.select-course-center .container .main-courses  .course .course-line .course-t .course-renzheng {display: inline-block; margin-right: 2px; width: 27px; height: 15px; background: url("../images/sprite.png") no-repeat -69px -142px; vertical-align: -3px;}
+.select-course-center .container .main-courses  .course .course-line .course-t .course-t-name {color:#999;}
+.select-course-center .container .main-courses  .course .course-line .course-t .course-t-name:hover {color:#23b8ff; text-decoration: none;}
+/*选课中心结束*/
+/*主体内容结束*/
+
+.all-courses {margin: 55px auto; width: 1200px; height: 70px; line-height: 60px; border: 5px solid #f4f4f4; box-sizing: border-box; text-align: center;}
+
+.all-courses a {font-size: 18px; color: #333;}
+.all-courses a:hover {color: #23b8ff; text-decoration: none;}
+
+
+.cooperation-links {margin: 0 auto; background: #444546}
+.cooperation-links .link-wrapper {width: 1200px; margin: 0 auto; padding: 40px 0 20px; border-bottom: 1px solid #4A4B4C}
+.cooperation-links .link-wrapper h3 {font-size: 22px; color: #999;}
+.cooperation-links .link-wrapper ul {padding-top: 20px; width: 1200px;}
+.cooperation-links .link-wrapper ul li {display: inline-block; padding: 0 40px 12px 0; vertical-align: middle;}
+.cooperation-links .link-wrapper ul li a {font-size: 14px; color: #999;}
+
+footer {height: 180px; padding: 40px; background: #444546; box-sizing: border-box; text-align: center;}
+
+footer .logo{display: block;width: 42px; height: 42px;}
+footer p{color: #777; line-height: 24px;}
+footer p a {color: #777;}
